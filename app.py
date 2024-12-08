@@ -7,8 +7,9 @@ from PIL import Image
 if torch.backends.mps.is_available():
     print("Running on MPS device")
     device = torch.device('mps')
-    x = torch.ones(1,device=device)
-    print(x)
+elif torch.cuda.is_available():
+    print("Running on CUDA device")
+    device = torch.device('cuda')
 else:
     print("Running on CPU")
 
