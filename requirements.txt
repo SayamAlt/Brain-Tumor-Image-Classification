@@ -1,4 +1,5 @@
-flask
+Flask
 torch
 torchvision
-pillow
+Pillow
+gunicorn
