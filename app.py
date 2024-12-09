@@ -4,6 +4,7 @@ warnings.filterwarnings('ignore')
 from torchvision import transforms
 from PIL import Image
 
+
 if torch.backends.mps.is_available():
     print("Running on MPS device")
     device = torch.device('mps')
@@ -12,6 +13,7 @@ elif torch.cuda.is_available():
     device = torch.device('cuda')
 else:
     print("Running on CPU")
+    device = torch.device('cpu')
 
 app = Flask(__name__)
 
